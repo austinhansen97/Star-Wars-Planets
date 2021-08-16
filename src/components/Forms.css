@@ -1,0 +1,34 @@
+.title {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.dropdowns {
+  width: 40%;
+  color: rgb(255, 230, 0);
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+select {
+  width: 100%;
+  padding: 2%;
+  border-radius: 11px;
+  margin: 0 0 2% 0;
+}
+
+select:hover {
+  letter-spacing: 0.5px;
+}
+
+label {
+  font-size: medium;
+  margin: 0;
+  padding: 0;
+}
+
+.appearing-words {
+  padding: 0;
+  margin: 9% 0 0 0;
+  font-size: small;
+}

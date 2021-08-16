@@ -1,0 +1,10 @@
+.card-wrapper {
+  padding: 3% 0%;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 5% 7%;
+  background-color: rgb(16, 16, 16);
+  border: 1px white solid;
+}

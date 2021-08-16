@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+/* Syncopate */
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-image: url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+}
+
+h1 {
+  font-family: "Syncopate", sans-serif;
+  color: white;
+  text-shadow: rgb(138, 124, 0) 4px 4px 2px;
+}
+
+h2,
+p,
+label {
+  font-family: "Syncopate", sans-serif;
+  color: rgb(255, 217, 0);
+}
