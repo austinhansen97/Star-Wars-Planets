@@ -1,8 +1,8 @@
-import React from 'react';
-import CityState from './components/CityState';
+import React from "react";
+import Planets from "./components/Planets";
 
-function App () {
-  return <CityState />;
-};
+function App() {
+  return <Planets />;
+}
 
 export default App;

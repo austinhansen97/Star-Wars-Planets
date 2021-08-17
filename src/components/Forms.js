@@ -1,83 +1,51 @@
-// import React from "react";
-// import Card from "../UI/Card";
-// import "./Forms.css";
-// import { useState } from "react";
+import React from "react";
+import Card from "../UI/Card";
+import "./Forms.css";
+import { useState } from "react";
 
-// function Forms(props) {
-//   // useState for grabbing the value of the state selected
-//   const [selectedState, setState] = useState("");
+function Forms(props) {
+  const [selectedPlanet, setSelectedPlanet] = useState("");
+  const [chosenFact, setChosenFact] = useState("");
 
-//   //   // States list data
-//   //   const statesData = [
-//   //     { states: "Select" },
-//   //     { states: "Virginia" },
-//   //     { states: "Massachusetts" },
-//   //     { states: "RhodeIsland" },
-//   //     { states: "Connecticut" },
-//   //     { states: "NewHampshire" },
-//   //     { states: "NewYork" },
-//   //     { states: "NewJersey" },
-//   //     { states: "Pennsylvania" },
-//   //     { states: "Delaware" },
-//   //     { states: "Maryland" },
-//   //     { states: "NorthCarolina" },
-//   //     { states: "SouthCarolina" },
-//   //     { states: "Georgia" },
-//   //   ];
+  props.selectedPlanet(selectedPlanet);
 
-//   //   // dynamic listing of State data
-//   //   const stateOption = statesData.map((data) => (
-//   //     <option value={data.states}>{data.states}</option>
-//   //   ));
+  return (
+    <section>
+      <Card>
+        <h1 className="title">STAR WARS PLANETS</h1>
+        <form className="parent-dropdowns">
+          <section className="left-panel">
+            <div className="label-select">
+              <label>CHOOSE A PLANET</label>
+              <select
+                onChange={(event) => {
+                  setSelectedPlanet(event.target.value);
+                }}
+              >
+                {props.planetArray}
+              </select>
+            </div>
 
-//   const latinObject = props.latin.album;
+            <div className="label-select">
+              <label>CHOOSE A FACT</label>
+              <select
+                onChange={(event) => {
+                  setChosenFact(event.target.value);
+                }}
+              >
+                {props.planetDetailsArray}
+              </select>
+            </div>
+          </section>
 
-//   console.log(latinObject);
+          <section className="right-panel">
+            <h3>{selectedPlanet}</h3>
+            <p>{chosenFact}</p>
+          </section>
+        </form>
+      </Card>
+    </section>
+  );
+}
 
-//   // Cities list data
-//   const citiesData = [
-//     {
-//       Select: "",
-//       Virginia: "Richmond",
-//       Massachusetts: "Boston",
-//       RhodeIsland: "Providence",
-//       Connecticut: "Hartford",
-//       NewHampshire: "Concord",
-//       NewYork: "Albany",
-//       NewJersey: "Trenton",
-//       Pennsylvania: "Harrisburg",
-//       Delaware: "Dover",
-//       Maryland: "Annapolis",
-//       NorthCarolina: "Raleigh",
-//       SouthCarolina: "Columbia",
-//       Georgia: "Atlanta",
-//     },
-//   ];
-
-//   // city dynamically appears dependent on "useState" updated variable
-//   let test = citiesData[0][selectedState];
-
-//   return (
-//     <section>
-//       <Card>
-//         <form className="dropdowns">
-//           <label>EASTERN STATES</label>
-//           <select
-//             onChange={(event) => {
-//               setState(event.target.value);
-//             }}
-//           >
-//             <option value={latinObject}>{latinObject}</option>
-//           </select>
-
-//           <label>CAPITAL</label>
-//           <select>
-//             <option value={test}>{test}</option>
-//           </select>
-//         </form>
-//       </Card>
-//     </section>
-//   );
-// }
-
-// export default Forms;
+export default Forms;
