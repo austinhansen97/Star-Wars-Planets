@@ -56,14 +56,14 @@ function Planets(props) {
     if (planetDetails[i].name === selectedPlanet) {
       planetDetailsArray.push(
         <option key={Math.random()}></option>,
+        <option key={Math.random()} value={planetDetails[i].population}>
+          Population
+        </option>,
         <option key={Math.random()} value={planetDetails[i].climate}>
           Climate
         </option>,
         <option key={Math.random()} value={planetDetails[i].terrain}>
           Terrain
-        </option>,
-        <option key={Math.random()} value={planetDetails[i].population}>
-          Population
         </option>,
         <option key={Math.random()} value={planetDetails[i].url}>
           API URL

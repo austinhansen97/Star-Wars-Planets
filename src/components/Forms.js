@@ -7,7 +7,9 @@ function Forms(props) {
   const [selectedPlanet, setSelectedPlanet] = useState("");
   const [chosenFact, setChosenFact] = useState("");
 
-  props.selectedPlanet(selectedPlanet);
+  function runFunction() {
+    props.selectedPlanet(selectedPlanet);
+  }
 
   return (
     <section>
@@ -20,7 +22,9 @@ function Forms(props) {
               <select
                 onChange={(event) => {
                   setSelectedPlanet(event.target.value);
+                  setChosenFact("");
                 }}
+                onClick={runFunction}
               >
                 {props.planetArray}
               </select>
