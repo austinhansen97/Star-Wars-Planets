@@ -1,5 +1,5 @@
 .title {
-  font-size: xx-large;
+  font-size: xxx-large;
   text-align: center;
 }
 
@@ -78,5 +78,9 @@ h3 {
   select {
     width: 80%;
     padding: 1.5%;
+  }
+
+  .title {
+    font-size: xx-large;
   }
 }

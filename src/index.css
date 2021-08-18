@@ -16,12 +16,18 @@ body {
 h1 {
   font-family: "Syncopate", sans-serif;
   color: white;
-  text-shadow: rgb(138, 124, 0) 4px 4px 2px;
+  text-shadow: rgb(138, 124, 0) 3.5px -3.5px 1px;
 }
 
 h2,
-p,
 label {
   font-family: "Syncopate", sans-serif;
   color: rgb(255, 217, 0);
+}
+
+p {
+  font-family: "Syncopate", sans-serif;
+  color: rgb(255, 217, 0);
+  font-size: large;
+  word-break: break-all;
 }
