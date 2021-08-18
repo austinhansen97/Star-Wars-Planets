@@ -28,7 +28,7 @@ function Planets(props) {
   planetListFunction();
   function planetListFunction() {
     planetArray = [];
-    for (let i = 0; i < planet.length; i++) {
+    for (let i = -1; i < planet.length; i++) {
       planetArray.push(
         <option key={Math.random()} value={planet[i]}>
           {planet[i]}
@@ -57,16 +57,16 @@ function Planets(props) {
       planetDetailsArray.push(
         <option key={Math.random()}></option>,
         <option key={Math.random()} value={planetDetails[i].population}>
-          Population
+          Population ({planetDetails[i].population})
         </option>,
         <option key={Math.random()} value={planetDetails[i].climate}>
-          Climate
+          Climate ({planetDetails[i].climate})
         </option>,
         <option key={Math.random()} value={planetDetails[i].terrain}>
-          Terrain
+          Terrain ({planetDetails[i].terrain})
         </option>,
         <option key={Math.random()} value={planetDetails[i].url}>
-          API URL
+          API URL ({planetDetails[i].url})
         </option>
       );
     }
