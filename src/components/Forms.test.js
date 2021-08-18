@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Forms from "./Forms";
 
 describe("Forms component", () => {
-  test("renders STAR WARS PLANETS as h1 text", () => {
+  test("Checks if STAR WARS PLANETS renders", () => {
     // arrange
     render(<Forms />);
 
@@ -16,19 +16,13 @@ describe("Forms component", () => {
     expect(starWarsPlanetsElement).toBeInTheDocument();
   });
 
-  //   test("if selectedPlanet useState is being updated when planet is selected", () => {
-  //     //arrange
-  //     render(<Forms />);
-  //     //act
-  //     const planetSelect = screen.getByRole("option");
-  //     userEvent.click(planetSelect);
+  test("Checks if planet data transferred to props.planetArray/props.planetDetailsArray in Forms", () => {
+    render(<Forms />);
+    const listBoxElements = screen.getAllByRole("combobox");
+    expect(listBoxElements).not.toHaveLength(0);
+  });
 
-  //     //assert
-  //     const planetChoice = screen.getByText("", { exact: false });
-  //     expect(planetChoice).toBeInTheDocument();
-  //   });
-
-  test("Test to see if CHOOSE A FACT is displaying", () => {
+  test("Checks if CHOOSE A FACT is displaying", () => {
     render(<Forms />);
     const fact = screen.getByText("choose a fact", { exact: false });
     expect(fact).toBeInTheDocument();
