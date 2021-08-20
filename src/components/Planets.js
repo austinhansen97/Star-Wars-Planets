@@ -4,7 +4,7 @@ import Forms from "./Forms";
 
 import "./Forms.css";
 
-function Planets(props) {
+function Planets() {
   const [planet, setPlanet] = useState("");
   const [planetDetails, setPlanetDetails] = useState("");
   const [selectedPlanet, setSelectedPlanet] = useState("");

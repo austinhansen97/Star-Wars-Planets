@@ -58,6 +58,21 @@ h3 {
   margin: 1%;
 }
 
+.planet-image {
+  width: 40%;
+  margin: 0;
+  padding: 0;
+  animation: spin 49s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* -------- */
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 1200px) {
   select {
