@@ -47,7 +47,7 @@ function Forms(props) {
     },
     {
       planetImage:
-        "https://lh3.googleusercontent.com/proxy/qRyxXFNrwxGbh-wkjvbcjhVG_c6sKYOerwCNAYwWAzGx_vGqT7rABHT1NVNP8WekYQ3-M0nScjUMg5TyOYgaqaqibWGX1Ow5TjwIrsateJgEYQ-GKHQzdBQESW8",
+        "https://lh3.googleusercontent.com/proxy/JH8fT4czjFU4A8ALOORIaLyQ2pIroDm8X0wgHk1AONTZz8Cd7LlH9PfMgu8t9Ghc69oRbjviDhvQTbYlVZtVRplan2mq3lQ8nQoULURUzMscgk_yq-BUguijY5c",
     },
   ];
 
@@ -113,7 +113,8 @@ function Forms(props) {
               </select>
             </div>
 
-            <div className="label-select">
+            {/* <div className="label-select">
+              
               <label>CHOOSE A FACT</label>
               <select
                 onChange={(event) => {
@@ -122,13 +123,13 @@ function Forms(props) {
               >
                 {props.planetDetailsArray}
               </select>
-            </div>
+            </div> */}
           </section>
 
           <section className="right-panel">
             {image}
             <h3>{selectedPlanet}</h3>
-            <p>{chosenFact}</p>
+            <div className="facts-div">{props.planetDetailsArray}</div>
           </section>
         </form>
       </Card>

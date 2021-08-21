@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Forms from "./Forms";
-
 import "./Forms.css";
 
 function Planets() {
@@ -55,19 +54,11 @@ function Planets() {
   for (let i = 0; i < planetDetails.length; i++) {
     if (planetDetails[i].name === selectedPlanet) {
       planetDetailsArray.push(
-        <option key={Math.random()}></option>,
-        <option key={Math.random()} value={planetDetails[i].population}>
-          Population ({planetDetails[i].population})
-        </option>,
-        <option key={Math.random()} value={planetDetails[i].climate}>
-          Climate ({planetDetails[i].climate})
-        </option>,
-        <option key={Math.random()} value={planetDetails[i].terrain}>
-          Terrain ({planetDetails[i].terrain})
-        </option>,
-        <option key={Math.random()} value={planetDetails[i].url}>
-          API URL ({planetDetails[i].url})
-        </option>
+        <p>
+          Population: {Number(planetDetails[i].population).toLocaleString()}
+        </p>,
+        <p>Climate: {planetDetails[i].climate}</p>,
+        <p>Terrain: {planetDetails[i].terrain}</p>
       );
     }
   }

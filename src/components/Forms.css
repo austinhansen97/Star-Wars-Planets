@@ -1,14 +1,21 @@
 .title {
   font-size: xxx-large;
   text-align: center;
+  margin: 1% 0 0 0;
+  padding: 0;
+  color: rgb(16, 16, 16);
+  text-shadow: -1px 1px 2px rgb(255, 217, 0), 1px 1px 2px rgb(255, 217, 0),
+    0px -1.5px 2px rgb(255, 217, 0);
 }
 
 select {
   width: 50%;
   padding: 1.5%;
-  border-radius: 11px;
+  border-radius: 19px;
   margin: 0;
   font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  border: none;
 }
 
 label {
@@ -21,6 +28,7 @@ h3 {
   font-family: "Syncopate", sans-serif;
   color: rgb(255, 217, 0);
   font-size: xx-large;
+  margin: 1% 0 0 0;
 }
 
 /* parent */
@@ -55,13 +63,14 @@ h3 {
 .right-panel {
   font-size: small;
   width: 80%;
-  margin: 1%;
+  margin: 0%;
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
 }
 
 .planet-image {
   width: 40%;
-  margin: 0;
-  padding: 0;
   animation: spin 49s linear infinite;
 }
 
@@ -72,15 +81,27 @@ h3 {
   }
 }
 
+.facts-div {
+  font-family: monospace;
+  color: rgb(255, 248, 188);
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: left;
+  width: 40%;
+}
+
 /* -------- */
 /* RESPONSIVE DESIGN */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   select {
     width: 90%;
     padding: 2%;
   }
   .label-select {
     margin: 1% 0;
+  }
+  .facts-p {
+    width: 50%;
   }
 }
 
@@ -97,5 +118,14 @@ h3 {
 
   .title {
     font-size: xx-large;
+  }
+  .facts-p {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .facts-p {
+    width: 70%;
   }
 }
