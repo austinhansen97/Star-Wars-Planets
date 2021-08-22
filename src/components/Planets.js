@@ -67,6 +67,8 @@ function Planets() {
     setSelectedPlanet(selectedPlanetFromForms);
   }
 
+  // JSX
+
   return (
     <div>
       <Forms

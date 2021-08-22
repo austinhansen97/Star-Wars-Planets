@@ -6,6 +6,16 @@
   color: rgb(16, 16, 16);
   text-shadow: -1px 1px 2px rgb(255, 217, 0), 1px 1px 2px rgb(255, 217, 0),
     0px -1.5px 2px rgb(255, 217, 0);
+  animation: reappear 1.3s;
+}
+
+@keyframes reappear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 select {
@@ -71,10 +81,10 @@ h3 {
 
 .planet-image {
   width: 40%;
-  animation: spin 49s linear infinite;
+  animation: planet 49s linear infinite;
 }
 
-@keyframes spin {
+@keyframes planet {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
